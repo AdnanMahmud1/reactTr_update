@@ -36,7 +36,6 @@ class Clock extends React.Component {
     }
 
     render() {
-        console.log('clock rendered');
         const { date, locale } = this.state;
         return (
             <div>

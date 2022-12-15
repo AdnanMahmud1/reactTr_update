@@ -12,7 +12,6 @@ class Button extends React.Component {
     }
 
     render() {
-        console.log('button rendered');
         const { change, locale } = this.props;
 
         return (
