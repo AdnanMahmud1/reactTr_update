@@ -5,13 +5,17 @@ import Text from './components/composition/Text';
 
 function App() {
     return (
-        <Emoji>
-            {({ addEmoji }) => (
-                <Bracket>
-                    {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
-                </Bracket>
-            )}
-        </Emoji>
+        <div>
+            <Emoji>
+                {({ addEmoji }) => (
+                    <Bracket>
+                        {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
+                    </Bracket>
+                )}
+            </Emoji>
+            {/* <br />
+            {Bracket()} */}
+        </div>
     );
 }
 
