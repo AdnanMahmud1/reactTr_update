@@ -1,15 +1,20 @@
-/* eslint-disable import/no-unresolved */
-import withCounter from './HOC/withCounter';
+import React from 'react';
 
-function ClickCounter(props) {
-    const { counter, incrementCount } = props;
-    return (
-        <div>
-            <button type="button" onClick={incrementCount}>
-                Clicked {counter} times
-            </button>
-        </div>
-    );
+export default class ClickCounter extends React.Component {
+    state = { counter: 0 };
+
+    incrementCount = () => {
+        this.setState((prevState) => ({ counter: prevState.counter + 1 }));
+    };
+
+    render() {
+        const { counter } = this.state;
+        return (
+            <div>
+                <button type="button" onClick={this.incrementCount}>
+                    Clicked {counter} times
+                </button>
+            </div>
+        );
+    }
 }
-
-export default withCounter(ClickCounter);
