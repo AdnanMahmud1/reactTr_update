@@ -1,23 +1,29 @@
-/* eslint-disable react/no-unstable-nested-components */
+/* eslint-disable react/jsx-no-constructed-context-values */
+import React from 'react';
 import ClickCounter from './components/ClickCounter';
 import Counter from './components/Counter';
-import HoverCounter from './components/HoverCounter';
+import Section from './components/Section';
+import ThemeContext from './contexts/themeContext';
 
-function App() {
-    return (
-        <div className="app">
-            <Counter>
-                {(counter, incrementCount) => (
-                    <ClickCounter counter={counter} incrementCount={incrementCount} />
-                )}
-            </Counter>
-            <Counter>
-                {(counter, incrementCount) => (
-                    <HoverCounter counter={counter} incrementCount={incrementCount} />
-                )}
-            </Counter>
-        </div>
-    );
+export default class App extends React.Component {
+    state = {
+        theme: 'green',
+    };
+
+    render() {
+        const { theme } = this.state;
+        return (
+            <div className="app">
+                <Counter>
+                    {(counter, incrementCount) => (
+                        <ClickCounter counter={counter} incrementCount={incrementCount} />
+                    )}
+                </Counter>
+                <ThemeContext.Provider value={{ theme }}>
+                    <Section />
+                </ThemeContext.Provider>
+            </div>
+        );
+    }
 }
 //! this is sample
-export default App;
