@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 export default class Counter extends Component {
     state = { counter: 0 };
@@ -11,7 +11,8 @@ export default class Counter extends Component {
     };
 
     render() {
-        const {render } = this.props;
-        return <div>Hello</div>;
+        const { children } = this.props;
+        const { counter } = this.state;
+        return children(counter, this.incrementCount);
     }
 }
