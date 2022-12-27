@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React from 'react';
 import ClickCounter from './components/ClickCounter';
@@ -7,25 +8,22 @@ import ThemeContext from './contexts/themeContext';
 
 export default class App extends React.Component {
     state = {
-        theme: 'green',
-    };
-
-    switchTheme = () => {
-        this.setState(({ theme }) => {
-            if (theme === 'dark') {
+        theme: 'light',
+        switchTheme: () => {
+            this.setState(({ theme }) => {
+                if (theme === 'dark') {
+                    return {
+                        theme: 'light',
+                    };
+                }
                 return {
-                    theme: 'light',
+                    theme: 'dark',
                 };
-            }
-
-            return {
-                theme: 'dark',
-            };
-        });
+            });
+        },
     };
 
     render() {
-        const { theme } = this.state;
         return (
             <div className="app">
                 <Counter>
@@ -33,7 +31,7 @@ export default class App extends React.Component {
                         <ClickCounter counter={counter} incrementCount={incrementCount} />
                     )}
                 </Counter>
-                <ThemeContext.Provider value={{ theme, switchTheme: this.switchTheme }}>
+                <ThemeContext.Provider value={this.state}>
                     <Section />
                 </ThemeContext.Provider>
             </div>
