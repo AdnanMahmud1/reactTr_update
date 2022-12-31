@@ -7,17 +7,35 @@ function Todo() {
         title: '',
         description: '',
     });
-    const (title, description) =todo;
-    
+    const { title, description } = todo;
+
     return (
         <div>
-            <p>{todo}</p>
-            <p><input type="text" value={} /></p>
+            <p>{title}</p>
             <p>
-                <textarea name="todo" value={todo} onChange={handleInput} />
+                <input
+                    type="text"
+                    value={title}
+                    onChange={(e) =>
+                        setTodo({
+                            ...todo,
+                            title: e.target.value,
+                        })
+                    }
+                />
             </p>
-            <hr />
-            <h2>{warning || 'Good choice!'}</h2>
+            <p>
+                <textarea
+                    name="todo"
+                    value={description}
+                    onChange={(e) =>
+                        setTodo({
+                            ...todo,
+                            description: e.target.value,
+                        })
+                    }
+                />
+            </p>
         </div>
     );
 }

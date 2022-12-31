@@ -2,13 +2,14 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React from 'react';
-import Todo from './components/Todo';
+import Counter from './components/Counter';
 
 export default class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <Todo />
+                {/* <Todo /> */}
+                <Counter />
             </div>
         );
     }
