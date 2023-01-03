@@ -2,14 +2,12 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { React } from 'react';
-import GetPost2 from './components/GetPost2';
+import LayoutComponent from './components/LayoutComponent';
 
 export default function App() {
     return (
         <div className="app">
-            <h1>
-                <GetPost2 />
-            </h1>
+            <LayoutComponent />
         </div>
     );
 }
