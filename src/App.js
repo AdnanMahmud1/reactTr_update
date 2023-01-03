@@ -2,12 +2,14 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { React } from 'react';
-import CounterThree from './components/CounterThree';
+import GetPost2 from './components/GetPost2';
 
 export default function App() {
     return (
         <div className="app">
-            <CounterThree />
+            <h1>
+                <GetPost2 />
+            </h1>
         </div>
     );
 }
