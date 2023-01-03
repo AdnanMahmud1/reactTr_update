@@ -2,12 +2,12 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { React } from 'react';
-import Form from './components/Form';
+import CounterThree from './components/CounterThree';
 
 export default function App() {
     return (
         <div className="app">
-            <Form />
+            <CounterThree />
         </div>
     );
 }
