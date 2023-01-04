@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Button from './Button';
 import { ButtonContainer, CardContainer, ContentContainer } from './styles/Container.styles';
+
+import nerdImage from '../assets/images/illustration.png';
 import StyledTitle from './styles/Custom.styles';
 import { H1, Image, P, Tag } from './styles/Elements';
 

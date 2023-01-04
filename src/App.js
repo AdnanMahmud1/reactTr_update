@@ -2,13 +2,15 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { React } from 'react';
+import GlobalStyle from './components/styles/Global.style';
 import Tutorial from './components/Tutorial';
 
 export default function App() {
     return (
-        <div className="app">
+        <>
+            <GlobalStyle />
             <Tutorial />
-        </div>
+        </>
     );
 }
 //! this is sample

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Title from '../Title';
 
-// eslint-disable-next-line import/prefer-default-export
-export const StyledTitle = styled(Title)`
+const StyledTitle = styled(Title)`
     color: ${(props) => props.color};
 `;
+export default StyledTitle;
