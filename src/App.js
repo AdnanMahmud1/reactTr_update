@@ -2,12 +2,13 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { React } from 'react';
-import LayoutComponent from './components/LayoutComponent';
+import './assets/css/global.css';
+import Logo from './components/Logo';
 
 export default function App() {
     return (
         <div className="app">
-            <LayoutComponent />
+            <Logo />
         </div>
     );
 }

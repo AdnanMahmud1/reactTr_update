@@ -1,0 +1,21 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorLine {
+  fill: #52d794;
+  font-style: italic !important;
+  font-weight: 700;
+  font-size: 48px;
+}
+.border {
+  stroke: #230764;
+  font-style: italic !important;
+  font-weight: 700;
+  font-size: 48px;
+}
