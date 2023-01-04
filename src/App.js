@@ -2,13 +2,12 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { React } from 'react';
-import './assets/css/global.css';
-import Logo from './components/Logo';
+import Tutorial from './components/Tutorial';
 
 export default function App() {
     return (
         <div className="app">
-            <Logo />
+            <Tutorial />
         </div>
     );
 }
