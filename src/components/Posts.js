@@ -1,11 +1,13 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export default function Posts() {
-    const params = useParams();
-    console.log(params);
+    // const params = useParams();
+    const { category, topic } = useParams();
+    const navigate = useNavigate();
+    console.log(navigate);
     return (
         <div>
-            Posts about - {params.category} in {params.topic}
+            Posts about - {category} in {topic}
         </div>
     );
 }
